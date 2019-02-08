@@ -4,8 +4,8 @@ import { AppRouterModule } from './app-router.module';
 
 //Component
 import { AppComponent } from './app.component';
-import { KlassesComponent } from './klasses/klasses.component';
 import { HeaderComponent } from './header/header.component';
+import { BodiesComponent } from './body/bodies.component';
 import { FooterComponent } from './footer/footer.component';
 
 //Service
@@ -14,7 +14,7 @@ import { DataService } from './data.service'
 @NgModule({
   declarations: [
     AppComponent,
-    KlassesComponent,
+    BodiesComponent,
     HeaderComponent,
     FooterComponent
   ],

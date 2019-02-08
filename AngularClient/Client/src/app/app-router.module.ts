@@ -2,11 +2,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 //Components
-import { KlassesComponent } from './klasses/klasses.component';
+import { BodiesComponent } from './body/bodies.component';
 
 const routes: Routes = [
-  { path: '', component: KlassesComponent },
-  { path: 'klasses', component: KlassesComponent }
+  { path: '', component: BodiesComponent },
+  { path: 'default', component: BodiesComponent }
 ]
 
 @NgModule({

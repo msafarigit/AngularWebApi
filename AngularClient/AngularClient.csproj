@@ -76,8 +76,8 @@
     <Content Include="Client\src\app\footer\footer.component.html" />
     <Content Include="Client\src\app\header\header.component.css" />
     <Content Include="Client\src\app\header\header.component.html" />
-    <Content Include="Client\src\app\klasses\klasses.component.css" />
-    <Content Include="Client\src\app\klasses\klasses.component.html" />
+    <Content Include="Client\src\app\body\bodies.component.css" />
+    <Content Include="Client\src\app\body\bodies.component.html" />
     <Content Include="Client\src\favicon.ico" />
     <Content Include="Client\src\index.html" />
     <Content Include="Client\src\karma.conf.js" />
@@ -123,8 +123,8 @@
     <TypeScriptCompile Include="Client\src\app\footer\footer.component.ts" />
     <TypeScriptCompile Include="Client\src\app\header\header.component.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\header\header.component.ts" />
-    <TypeScriptCompile Include="Client\src\app\klasses\klasses.component.spec.ts" />
-    <TypeScriptCompile Include="Client\src\app\klasses\klasses.component.ts" />
+    <TypeScriptCompile Include="Client\src\app\body\bodies.component.spec.ts" />
+    <TypeScriptCompile Include="Client\src\app\body\bodies.component.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.ts" />
     <TypeScriptCompile Include="Client\src\main.ts" />
