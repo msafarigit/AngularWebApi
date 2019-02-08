@@ -2,6 +2,7 @@ import * as tslib_1 from "tslib";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRouterModule } from './app-router.module';
+import { HttpClientModule } from '@angular/common/http';
 //Component
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +23,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 BrowserModule,
+                HttpClientModule,
                 AppRouterModule
             ],
             providers: [

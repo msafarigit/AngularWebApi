@@ -11,7 +11,7 @@ namespace AngularWebApi.Controllers
         {
             return new Klass[] {
                 new Klass { ID = 1, Name = this.GetType().ToString(), IsActive = true, Value = 12.11  },
-                new Klass { ID = 2, Name = this.GetType().ToString(), IsActive = false, Value = 15  }
+                new Klass { ID = 2, Name = typeof(Klass).ToString(), IsActive = false, Value = 15  }
             };
         }
 

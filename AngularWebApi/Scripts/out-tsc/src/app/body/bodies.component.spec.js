@@ -1,16 +1,16 @@
 import { async, TestBed } from '@angular/core/testing';
-import { KlassesComponent } from './bodies.component';
+import { BodiesComponent } from './bodies.component';
 describe('KlassesComponent', function () {
     var component;
     var fixture;
     beforeEach(async(function () {
         TestBed.configureTestingModule({
-            declarations: [KlassesComponent]
+            declarations: [BodiesComponent]
         })
             .compileComponents();
     }));
     beforeEach(function () {
-        fixture = TestBed.createComponent(KlassesComponent);
+        fixture = TestBed.createComponent(BodiesComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
