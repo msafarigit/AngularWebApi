@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRouterModule } from './app-router.module';
+import { HttpClientModule } from '@angular/common/http';
 
 //Component
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { DataService } from './data.service'
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRouterModule
   ],
   providers: [
