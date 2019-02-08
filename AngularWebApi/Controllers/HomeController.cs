@@ -10,7 +10,7 @@ namespace AngularWebApi.Controllers
     {
         public ActionResult Index()
         {
-            return View("NgApp");
+            return View("Client");
         }
 
     }
