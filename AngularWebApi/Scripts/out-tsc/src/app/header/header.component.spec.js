@@ -1,16 +1,16 @@
 import { async, TestBed } from '@angular/core/testing';
-import { BodiesComponent } from './bodies.component';
-describe('KlassesComponent', function () {
+import { HeaderComponent } from './header.component';
+describe('HeaderComponent', function () {
     var component;
     var fixture;
     beforeEach(async(function () {
         TestBed.configureTestingModule({
-            declarations: [BodiesComponent]
+            declarations: [HeaderComponent]
         })
             .compileComponents();
     }));
     beforeEach(function () {
-        fixture = TestBed.createComponent(BodiesComponent);
+        fixture = TestBed.createComponent(HeaderComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
@@ -18,4 +18,4 @@ describe('KlassesComponent', function () {
         expect(component).toBeTruthy();
     });
 });
-//# sourceMappingURL=bodies.component.spec.js.map
+//# sourceMappingURL=header.component.spec.js.map
