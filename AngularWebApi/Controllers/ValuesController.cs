@@ -1,8 +1,5 @@
-﻿using System;
+﻿using AngularWebApi.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace AngularWebApi.Controllers
@@ -10,9 +7,12 @@ namespace AngularWebApi.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<Klass> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new Klass[] {
+                new Klass { ID = 1, Name = this.GetType().ToString(), IsActive = true, Value = 12.11  },
+                new Klass { ID = 2, Name = this.GetType().ToString(), IsActive = false, Value = 15  }
+            };
         }
 
         // GET api/values/5
