@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Client\e2e\protractor.conf.js" />
     <Content Include="Client\src\app\app.component.css" />
     <Content Include="Client\src\app\app.component.html" />
     <Content Include="Client\src\app\footer\footer.component.css" />
@@ -88,17 +87,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Client\.editorconfig" />
-    <Content Include="Client\.gitignore" />
     <Content Include="Client\angular.json" />
-    <Content Include="Client\e2e\tsconfig.e2e.json" />
     <Content Include="Client\package-lock.json" />
     <Content Include="Client\package.json" />
-    <Content Include="Client\README.md" />
     <Content Include="Client\src\assets\.gitkeep" />
     <Content Include="Client\src\browserslist" />
     <Content Include="Client\src\tsconfig.app.json" />
-    <Content Include="Client\src\tsconfig.spec.json" />
     <Content Include="Client\src\tslint.json" />
     <Content Include="Client\tsconfig.json" />
     <Content Include="Client\tslint.json" />
@@ -111,19 +105,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Client\e2e\src\app.e2e-spec.ts" />
-    <TypeScriptCompile Include="Client\e2e\src\app.po.ts" />
     <TypeScriptCompile Include="Client\src\app\app-router.module.ts" />
     <TypeScriptCompile Include="Client\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\app.component.ts" />
     <TypeScriptCompile Include="Client\src\app\app.module.ts" />
-    <TypeScriptCompile Include="Client\src\app\data.service.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\data.service.ts" />
-    <TypeScriptCompile Include="Client\src\app\footer\footer.component.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\footer\footer.component.ts" />
-    <TypeScriptCompile Include="Client\src\app\header\header.component.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\header\header.component.ts" />
-    <TypeScriptCompile Include="Client\src\app\body\bodies.component.spec.ts" />
     <TypeScriptCompile Include="Client\src\app\body\bodies.component.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.ts" />
