@@ -69,18 +69,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Client\src\app\app.component.css" />
-    <Content Include="Client\src\app\app.component.html" />
-    <Content Include="Client\src\app\footer\footer.component.css" />
-    <Content Include="Client\src\app\footer\footer.component.html" />
-    <Content Include="Client\src\app\header\header.component.css" />
-    <Content Include="Client\src\app\header\header.component.html" />
-    <Content Include="Client\src\app\body\bodies.component.css" />
-    <Content Include="Client\src\app\body\bodies.component.html" />
-    <Content Include="Client\src\favicon.ico" />
+    <Content Include="Client\src\general.css" />
     <Content Include="Client\src\index.html" />
     <Content Include="Client\src\karma.conf.js" />
-    <Content Include="Client\src\styles.css" />
+    <Content Include="Client\src\views\home\home.view.html" />
+    <Content Include="Client\src\views\main\app.view.html" />
+    <Content Include="Client\src\views\security\user\userInfo.view.html" />
+    <Content Include="Client\src\views\security\user\userSearch.view.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,10 +85,7 @@
     <Content Include="Client\angular.json" />
     <Content Include="Client\package-lock.json" />
     <Content Include="Client\package.json" />
-    <Content Include="Client\src\assets\.gitkeep" />
     <Content Include="Client\src\browserslist" />
-    <Content Include="Client\src\tsconfig.app.json" />
-    <Content Include="Client\src\tslint.json" />
     <Content Include="Client\tsconfig.json" />
     <Content Include="Client\tslint.json" />
     <None Include="packages.config" />
@@ -105,22 +97,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Client\src\app\app-router.module.ts" />
-    <TypeScriptCompile Include="Client\src\app\app.component.spec.ts" />
-    <TypeScriptCompile Include="Client\src\app\app.component.ts" />
-    <TypeScriptCompile Include="Client\src\app\app.module.ts" />
-    <TypeScriptCompile Include="Client\src\app\data.service.ts" />
-    <TypeScriptCompile Include="Client\src\app\footer\footer.component.ts" />
-    <TypeScriptCompile Include="Client\src\app\header\header.component.ts" />
-    <TypeScriptCompile Include="Client\src\app\body\bodies.component.ts" />
+    <TypeScriptCompile Include="Client\src\app.module.ts" />
+    <TypeScriptCompile Include="Client\src\app.router.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.ts" />
     <TypeScriptCompile Include="Client\src\main.ts" />
     <TypeScriptCompile Include="Client\src\polyfills.ts" />
-    <TypeScriptCompile Include="Client\src\test.ts" />
+    <TypeScriptCompile Include="Client\src\service\data.service.ts" />
+    <TypeScriptCompile Include="Client\src\views\home\home.component.ts" />
+    <TypeScriptCompile Include="Client\src\views\main\app.component.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\security.module.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\security.router.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\user\user.model.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\user\userInfo.component.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\user\userSearch.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\src\assets\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

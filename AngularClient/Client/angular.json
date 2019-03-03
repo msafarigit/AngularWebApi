@@ -17,13 +17,11 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/general.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
