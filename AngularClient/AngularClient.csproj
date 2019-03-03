@@ -155,7 +155,7 @@
     <PreBuildEvent>echo "cd $(SolutionDir)AngularClient\Client" &amp;&amp;^
 cd "$(SolutionDir)AngularClient\Client" &amp;&amp;^
 ng build &amp;&amp;^
-xcopy /I /E /Y "$(SolutionDir)AngularClient\Client\dist" "$(ProjectDir)Scripts\NgApp"
+xcopy /I /E /Y "$(SolutionDir)AngularClient\Client\dist" "$(ProjectDir)Scripts"
 </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
