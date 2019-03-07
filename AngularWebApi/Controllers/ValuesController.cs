@@ -1,5 +1,6 @@
 ﻿using AngularWebApi.Models;
 using System.Collections.Generic;
+using System.Web;
 using System.Web.Http;
 
 namespace AngularWebApi.Controllers
@@ -9,6 +10,8 @@ namespace AngularWebApi.Controllers
         // GET api/values
         public IEnumerable<Klass> Get()
         {
+            HttpContext.Current.Session.Add("Client", Request);
+
             return new Klass[] {
                 new Klass { ID = 1, Name = this.GetType().ToString(), IsActive = true, Value = 12.11  },
                 new Klass { ID = 2, Name = typeof(Klass).ToString(), IsActive = false, Value = 15  }
