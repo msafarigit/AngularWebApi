@@ -179,6 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Client\src\favicon.ico" />
     <Content Include="Client\src\general.css" />
     <Content Include="Client\src\index.html" />
     <Content Include="Client\src\karma.conf.js" />
@@ -264,6 +265,8 @@
     <Content Include="Client\package.json" />
     <Content Include="Client\tsconfig.json" />
     <Content Include="Client\tslint.json" />
+    <Content Include="Client\.angulardoc.json" />
+    <Content Include="Client\src\tsconfig.app.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
