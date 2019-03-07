@@ -179,6 +179,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Client\src\general.css" />
+    <Content Include="Client\src\index.html" />
+    <Content Include="Client\src\karma.conf.js" />
+    <Content Include="Client\src\views\home\home.view.html" />
+    <Content Include="Client\src\views\main\app.view.html" />
+    <Content Include="Client\src\views\security\user\userInfo.view.html" />
+    <Content Include="Client\src\views\security\user\userSearch.view.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -186,8 +193,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -207,12 +212,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -231,6 +230,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Client\src\assets\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -257,12 +258,32 @@
     <Content Include="Content\bootstrap-theme.css.map" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\src\browserslist" />
+    <Content Include="Client\angular.json" />
+    <Content Include="Client\package-lock.json" />
+    <Content Include="Client\package.json" />
+    <Content Include="Client\tsconfig.json" />
+    <Content Include="Client\tslint.json" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Client\src\app.module.ts" />
+    <TypeScriptCompile Include="Client\src\app.router.ts" />
+    <TypeScriptCompile Include="Client\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="Client\src\environments\environment.ts" />
+    <TypeScriptCompile Include="Client\src\main.ts" />
+    <TypeScriptCompile Include="Client\src\polyfills.ts" />
+    <TypeScriptCompile Include="Client\src\service\data.service.ts" />
+    <TypeScriptCompile Include="Client\src\views\home\home.component.ts" />
+    <TypeScriptCompile Include="Client\src\views\main\app.component.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\security.module.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\security.router.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\user\user.model.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\user\userInfo.component.ts" />
+    <TypeScriptCompile Include="Client\src\views\security\user\userSearch.component.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

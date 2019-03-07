@@ -1,0 +1,19 @@
+<div >
+    <a [routerLink]="['Add']">کاربر جدید</a>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of UserList">
+            <td>{{user.Name}}</td>
+            <td>{{user.Username}}</td>
+            <td>{{user.Password}}</td>
+        </tr>
+    </tbody>
+</table>
