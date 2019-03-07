@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\src\favicon.ico" />
     <Content Include="Client\src\general.css" />
     <Content Include="Client\src\index.html" />
     <Content Include="Client\src\karma.conf.js" />
@@ -88,6 +89,7 @@
     <Content Include="Client\src\browserslist" />
     <Content Include="Client\tsconfig.json" />
     <Content Include="Client\tslint.json" />
+    <Content Include="Client\src\tsconfig.app.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
