@@ -77,9 +77,13 @@
     <Content Include="Client\src\views\main\app.view.html" />
     <Content Include="Client\src\views\security\user\userInfo.view.html" />
     <Content Include="Client\src\views\security\user\userSearch.view.html" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,10 +158,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>echo "cd $(SolutionDir)AngularClient\Client" &amp;&amp;^
-cd "$(SolutionDir)AngularClient\Client" &amp;&amp;^
-ng build &amp;&amp;^
-xcopy /I /E /Y "$(SolutionDir)AngularClient\Client\dist" "$(ProjectDir)Scripts"
+    <PreBuildEvent>cd "$(SolutionDir)AngularClient\Client" &amp;&amp;^
+ng b &amp;&amp;^
 </PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
