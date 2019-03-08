@@ -1,10 +1,10 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "../node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Client": {
-      "root": "",
+      "root": "Client",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -13,7 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Client",
+            "baseHref": "/",
+            "deployUrl": "/Scripts/Client/",
+            "outputPath": "../Scripts/Client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

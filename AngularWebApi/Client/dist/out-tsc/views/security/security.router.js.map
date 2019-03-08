@@ -1,1 +1,0 @@
-{"version":3,"file":"security.router.js","sourceRoot":"","sources":["../../../../src/views/security/security.router.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,mBAAmB,EAAE,MAAM,6BAA6B,CAAC;AAClE,OAAO,EAAE,iBAAiB,EAAE,MAAM,2BAA2B,CAAC;AAE9D,MAAM,CAAC,IAAM,aAAa,GAAY;IAClC,EAAE,IAAI,EAAE,EAAE,EAAE,SAAS,EAAE,mBAAmB,EAAE;IAC5C,EAAE,IAAI,EAAE,KAAK,EAAE,SAAS,EAAE,iBAAiB,EAAE;CAChD,CAAA"}
