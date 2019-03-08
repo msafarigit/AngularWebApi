@@ -69,7 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Client\src\favicon.ico" />
+    <Content Include="favicon.ico" />
     <Content Include="Client\src\general.css" />
     <Content Include="Client\src\index.html" />
     <Content Include="Client\src\karma.conf.js" />
