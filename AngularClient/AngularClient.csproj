@@ -69,8 +69,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap.css" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.js" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Client\src\content\jquery\core.js" />
+    <Content Include="Client\src\content\jquery\jquery.js" />
+    <Content Include="Client\src\content\jquery\jquery.min.js" />
+    <Content Include="Client\src\content\jquery\jquery.slim.js" />
+    <Content Include="Client\src\content\jquery\jquery.slim.min.js" />
     <Content Include="favicon.ico" />
-    <Content Include="Client\src\general.css" />
+    <Content Include="Client\src\content\general.css" />
     <Content Include="Client\src\index.html" />
     <Content Include="Client\src\karma.conf.js" />
     <Content Include="Client\src\views\home\home.view.html" />
@@ -94,6 +109,18 @@
     <Content Include="Client\tsconfig.json" />
     <Content Include="Client\tslint.json" />
     <Content Include="Client\src\tsconfig.app.json" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Client\src\content\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Client\src\content\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Client\src\content\jquery\jquery.min.map" />
+    <Content Include="Client\src\content\jquery\jquery.slim.min.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
