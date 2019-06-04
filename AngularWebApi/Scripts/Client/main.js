@@ -1,5 +1,27 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
+/***/ "../../node_modules/raw-loader/index.js!../src/views/home/home.view.html":
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/raw-loader!../src/views/home/home.view.html ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "welcome to home!"
+
+/***/ }),
+
+/***/ "../../node_modules/raw-loader/index.js!../src/views/main/app.view.html":
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/raw-loader!../src/views/main/app.view.html ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ul>\n  <li>\n    <a [routerLink]=\"['Home']\">خانه</a>\n  </li>\n  <li>\n    <a [routerLink]=\"['UserSearch']\">مدیریت کاربران</a>\n  </li>\n</ul>\n\n<div>\n  <router-outlet></router-outlet>\n</div>\n\n<div style=\"text-align:center\">\n    <h1>\n      Welcome to {{ title }}!\n    </h1>\n    <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>"
+
+/***/ }),
+
 /***/ "../src/$$_lazy_route_resource lazy recursive":
 /*!***********************************************************!*\
   !*** ../src/$$_lazy_route_resource lazy namespace object ***!
@@ -14,16 +36,16 @@ var map = {
 	]
 };
 function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids) {
+	if(!__webpack_require__.o(map, req)) {
 		return Promise.resolve().then(function() {
 			var e = new Error("Cannot find module '" + req + "'");
 			e.code = 'MODULE_NOT_FOUND';
 			throw e;
 		});
 	}
+
+	var ids = map[req], id = ids[0];
 	return __webpack_require__.e(ids[1]).then(function() {
-		var id = ids[0];
 		return __webpack_require__(id);
 	});
 }
@@ -229,24 +251,13 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            template: __webpack_require__(/*! ./home.view.html */ "../src/views/home/home.view.html")
+            template: __webpack_require__(/*! raw-loader!./home.view.html */ "../../node_modules/raw-loader/index.js!../src/views/home/home.view.html")
         })
     ], HomeComponent);
     return HomeComponent;
 }());
 
 
-
-/***/ }),
-
-/***/ "../src/views/home/home.view.html":
-/*!****************************************!*\
-  !*** ../src/views/home/home.view.html ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "welcome to home!"
 
 /***/ }),
 
@@ -271,24 +282,13 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.view.html */ "../src/views/main/app.view.html")
+            template: __webpack_require__(/*! raw-loader!./app.view.html */ "../../node_modules/raw-loader/index.js!../src/views/main/app.view.html")
         })
     ], AppComponent);
     return AppComponent;
 }());
 
 
-
-/***/ }),
-
-/***/ "../src/views/main/app.view.html":
-/*!***************************************!*\
-  !*** ../src/views/main/app.view.html ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<ul>\n  <li>\n    <a [routerLink]=\"['Home']\">خانه</a>\n  </li>\n  <li>\n    <a [routerLink]=\"['UserSearch']\">مدیریت کاربران</a>\n  </li>\n</ul>\n\n<div>\n  <router-outlet></router-outlet>\n</div>\n\n<div style=\"text-align:center\">\n    <h1>\n      Welcome to {{ title }}!\n    </h1>\n    <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>"
 
 /***/ }),
 
