@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../../node_modules/postcss-loader/src/index.js?!../src/content/bootstrap/css/bootstrap.min.css":
-/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** E:/Repo/AngularWebApi/AngularWebApi/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!E:/Repo/AngularWebApi/AngularWebApi/node_modules/postcss-loader/src??embedded!../src/content/bootstrap/css/bootstrap.min.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/postcss-loader/src??embedded!../src/content/bootstrap/css/bootstrap.min.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -12,9 +12,9 @@ module.exports = [[module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com
 /***/ }),
 
 /***/ "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../../node_modules/postcss-loader/src/index.js?!../src/content/general.css":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** E:/Repo/AngularWebApi/AngularWebApi/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!E:/Repo/AngularWebApi/AngularWebApi/node_modules/postcss-loader/src??embedded!../src/content/general.css ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/postcss-loader/src??embedded!../src/content/general.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -23,9 +23,9 @@ module.exports = [[module.i, "/* You can add global styles to this file, and als
 /***/ }),
 
 /***/ "../../node_modules/style-loader/lib/addStyles.js":
-/*!**************************************************************************************!*\
-  !*** E:/Repo/AngularWebApi/AngularWebApi/node_modules/style-loader/lib/addStyles.js ***!
-  \**************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/style-loader/lib/addStyles.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -432,9 +432,9 @@ function updateLink (link, options, obj) {
 /***/ }),
 
 /***/ "../../node_modules/style-loader/lib/urls.js":
-/*!*********************************************************************************!*\
-  !*** E:/Repo/AngularWebApi/AngularWebApi/node_modules/style-loader/lib/urls.js ***!
-  \*********************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/style-loader/lib/urls.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Repo\AngularWebApi\AngularWebApi\Client\src\content\bootstrap\css\bootstrap.min.css */"../src/content/bootstrap/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! E:\Repo\AngularWebApi\AngularWebApi\Client\src\content\general.css */"../src/content/general.css");
+__webpack_require__(/*! C:\Users\Dot-PC\source\repos\AngularWebApi\AngularWebApi\Client\src\content\bootstrap\css\bootstrap.min.css */"../src/content/bootstrap/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! C:\Users\Dot-PC\source\repos\AngularWebApi\AngularWebApi\Client\src\content\general.css */"../src/content/general.css");
 
 
 /***/ })

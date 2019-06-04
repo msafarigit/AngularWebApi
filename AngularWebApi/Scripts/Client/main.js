@@ -299,7 +299,7 @@ module.exports = "<ul>\n  <li>\n    <a [routerLink]=\"['Home']\">خانه</a>\n 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! E:\Repo\AngularWebApi\AngularWebApi\Client\src\main.ts */"../src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Dot-PC\source\repos\AngularWebApi\AngularWebApi\Client\src\main.ts */"../src/main.ts");
 
 
 /***/ })
