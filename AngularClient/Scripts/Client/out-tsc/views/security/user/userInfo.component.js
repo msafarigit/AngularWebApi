@@ -12,6 +12,9 @@ var UserInfoComponent = /** @class */ (function () {
         //   console.error(error)
         // })
     };
+    UserInfoComponent.prototype.hasError = function (controlName, validatorType) {
+        return this.User.formGroup.controls[controlName].hasError(validatorType);
+    };
     UserInfoComponent = tslib_1.__decorate([
         Component({
             templateUrl: './userInfo.view.html'

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"User.formGroup\">\r\n    Name: <input [(ngModel)]=\"User.Name\" formControlName=\"NameControl\" />\r\n    <br />\r\n    Username <input [(ngModel)]=\"User.Username\" formControlName=\"UsernameControl\" />\r\n    <br />\r\n    Password: <input [(ngModel)]=\"User.Password\" formControlName=\"PasswordControl\" />\r\n    <br />\r\n    <!--XXX: <input [(ngModel)]=\"User.Password\" [ngModelOptions]=\"{standalone: true}\" />\r\n    <br />-->\r\n    <input type=\"button\" (click)=\"Add()\" value=\"Add user\" [disabled]=\"!User.formGroup.valid\" />\r\n    {{User.Username}}\r\n</form>\r\n\r\n<div *ngIf=\"User.formGroup.dirty\"\r\n     [hidden]=\"!User.formGroup.controls['NameControl'].hasError('required')\">User.Name is required</div>\r\n<br />\r\n<div *ngIf=\"User.formGroup.dirty\"\r\n     [hidden]=\"!User.formGroup.controls['PasswordControl'].hasError('required')\">User.Password is required</div>\r\n<div *ngIf=\"User.formGroup.dirty\"\r\n     [hidden]=\"!User.formGroup.controls['PasswordControl'].hasError('pattern')\">User.Password pattern is invalid</div>\r\n<br />"
+module.exports = "<form [formGroup]=\"User.formGroup\">\r\n    Name: <input [(ngModel)]=\"User.Name\" formControlName=\"NameControl\" />\r\n    <br />\r\n    Username <input [(ngModel)]=\"User.Username\" formControlName=\"UsernameControl\" />\r\n    <br />\r\n    Password: <input [(ngModel)]=\"User.Password\" formControlName=\"PasswordControl\" />\r\n    <br />\r\n    <!--XXX: <input [(ngModel)]=\"User.Password\" [ngModelOptions]=\"{standalone: true}\" />\r\n    <br />-->\r\n    <input type=\"button\" (click)=\"Add()\" value=\"Add user\" [disabled]=\"!User.formGroup.valid\" />\r\n    {{User.Username}}\r\n</form>\r\n\r\n<div *ngIf=\"User.formGroup.dirty\"\r\n     [hidden]=\"!User.formGroup.controls['NameControl'].hasError('required')\">User.Name is required</div>\r\n<br />\r\n<div *ngIf=\"User.formGroup.dirty\"\r\n     [hidden]=\"!hasError('PasswordControl', 'required')\">User.Password is required</div>\r\n<div *ngIf=\"User.formGroup.dirty\"\r\n     [hidden]=\"!User.formGroup.controls['PasswordControl'].hasError('pattern')\">User.Password pattern is invalid</div>\r\n<br />"
 
 /***/ }),
 
@@ -174,6 +174,9 @@ var UserInfoComponent = /** @class */ (function () {
         // }, error => {
         //   console.error(error)
         // })
+    };
+    UserInfoComponent.prototype.hasError = function (controlName, validatorType) {
+        return this.User.formGroup.controls[controlName].hasError(validatorType);
     };
     UserInfoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
