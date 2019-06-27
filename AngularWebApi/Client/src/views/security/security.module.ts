@@ -21,3 +21,18 @@ import { UserInfoComponent } from './user/userInfo.component';
 })
 
 export class SecurityModule { }
+
+//Angular's own BrowserModule exports a couple of NgModules like this:
+//  exports: [CommonModule, ApplicationModule]
+
+//CommonModule ngmodule: Exports all the basic Angular directives and pipes, such as NgIf, NgForOf, DecimalPipe, and so on.Re - exported by BrowserModule, 
+//  which is included automatically in the root AppModule when you create a new app with the CLI new command.
+
+//ApplicationModule ngmodule: Configures the root injector for an app with providers of @angular/core dependencies that ApplicationRef needs to bootstrap components.
+
+//FormsModule ngmodule: Exports the required providers and directives for template - driven forms, making them available for import by NgModules that import this module.
+//  such as: NgForm directive, NgModel directive, RequiredValidator directive
+//  RequiredValidator: A directive that adds the required validator to any controls marked with the required attribute.The directive is provided with the NG_VALIDATORS multi - provider list.
+
+//ReactiveFormsModule ngmodule: Exports the required infrastructure and directives for reactive forms, making them available for import by NgModules that import this module.
+//  such as: FormBuilder provider, FormControlName directive, FormGroup directive: Binds an existing FormGroup to a DOM element.
