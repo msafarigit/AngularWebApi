@@ -32,3 +32,5 @@ export class UserModel {
 //FormControl class: Tracks the value and validation status of an individual form control.
 //Validators class: Provides a set of built -in validators that can be used by form controls.
 //  A validator is a function that processes a FormControl or collection of controls and returns an error map or null. A null map means that validation has passed.
+
+//formGroup state: .dirty, .pristine, .touched, .untouched, .valid, .invalid
