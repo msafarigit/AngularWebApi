@@ -1,9 +1,21 @@
-Name: <input [(ngModel)]="User.Name" />
-<br/>
-Username <input [(ngModel)]="User.Username" />
-<br/>
-Password: <input [(ngModel)] = "User.Password" />
-<br/>
-<input type="button" (click)="Add()" value="Add user" />
-{{User.Username}}
-<br/>
+<form [formGroup]="User.formGroup">
+    Name: <input [(ngModel)]="User.Name" formControlName="NameControl" />
+    <br />
+    Username <input [(ngModel)]="User.Username" formControlName="UsernameControl" />
+    <br />
+    Password: <input [(ngModel)]="User.Password" formControlName="PasswordControl" />
+    <br />
+    <!--XXX: <input [(ngModel)]="User.Password" [ngModelOptions]="{standalone: true}" />
+    <br />-->
+    <input type="button" (click)="Add()" value="Add user" [disabled]="!User.formGroup.valid" />
+    {{User.Username}}
+</form>
+
+<div *ngIf="User.formGroup.dirty"
+     [hidden]="!User.formGroup.controls['NameControl'].hasError('required')">User.Name is required</div>
+<br />
+<div *ngIf="User.formGroup.dirty"
+     [hidden]="!User.formGroup.controls['PasswordControl'].hasError('required')">User.Password is required</div>
+<div *ngIf="User.formGroup.dirty"
+     [hidden]="!User.formGroup.controls['PasswordControl'].hasError('pattern')">User.Password pattern is invalid</div>
+<br />
