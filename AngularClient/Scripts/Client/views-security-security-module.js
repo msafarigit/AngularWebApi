@@ -144,6 +144,7 @@ var UserModel = /** @class */ (function () {
 //FormControl class: Tracks the value and validation status of an individual form control.
 //Validators class: Provides a set of built -in validators that can be used by form controls.
 //  A validator is a function that processes a FormControl or collection of controls and returns an error map or null. A null map means that validation has passed.
+//formGroup state: .dirty, .pristine, .touched, .untouched, .valid, .invalid
 
 
 /***/ }),
@@ -165,8 +166,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var UserInfoComponent = /** @class */ (function () {
-    function UserInfoComponent() {
+    function UserInfoComponent(injector) {
+        this.Logger = null;
         this.User = new _user_model__WEBPACK_IMPORTED_MODULE_2__["UserModel"]();
+        this.Logger = injector.get("1");
+        this.Logger.Log();
     }
     UserInfoComponent.prototype.ngOnInit = function () {
         // this.dataService.get('Home').subscribe(data => {
@@ -182,7 +186,7 @@ var UserInfoComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             template: __webpack_require__(/*! raw-loader!./userInfo.view.html */ "../node_modules/raw-loader/index.js!../src/views/security/user/userInfo.view.html")
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]])
     ], UserInfoComponent);
     return UserInfoComponent;
 }());
@@ -204,13 +208,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_service_data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/service/data.service */ "../src/service/data.service.ts");
+/* harmony import */ var src_service_logger_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/service/logger.service */ "../src/service/logger.service.ts");
+
 
 
 
 var UserSearchComponent = /** @class */ (function () {
-    function UserSearchComponent(dataService) {
+    function UserSearchComponent(dataService, logger) {
         this.dataService = dataService;
+        this.logger = logger;
+        this.Logger = null;
         this.UserList = new Array();
+        this.Logger = logger;
+        this.Logger.Log();
     }
     UserSearchComponent.prototype.Add = function () {
         //this.UserList.push(this.User);
@@ -222,7 +232,7 @@ var UserSearchComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             template: __webpack_require__(/*! raw-loader!./userSearch.view.html */ "../node_modules/raw-loader/index.js!../src/views/security/user/userSearch.view.html")
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_service_data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"], src_service_logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"]])
     ], UserSearchComponent);
     return UserSearchComponent;
 }());

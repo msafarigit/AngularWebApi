@@ -8,6 +8,13 @@ import { AppRoute } from './app.router';
 import { AppComponent } from './views/main/app.component';
 import { HomeComponent } from './views/home/home.component';
 import { DataService } from './service/data.service';
+import { LoggerService, DbLoggerService, FileLoggerService } from './service/logger.service';
+//http get for have all logger
+var providers = [
+    { provide: LoggerService, useClass: DbLoggerService },
+    { provide: "1", useClass: FileLoggerService },
+    DataService
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -23,9 +30,7 @@ var AppModule = /** @class */ (function () {
                 FormsModule,
                 HttpClientModule
             ],
-            providers: [
-                DataService
-            ],
+            providers: providers,
             bootstrap: [AppComponent]
         })
     ], AppModule);

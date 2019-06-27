@@ -137,6 +137,7 @@
     <TypeScriptCompile Include="Client\src\main.ts" />
     <TypeScriptCompile Include="Client\src\polyfills.ts" />
     <TypeScriptCompile Include="Client\src\service\data.service.ts" />
+    <TypeScriptCompile Include="Client\src\service\logger.service.ts" />
     <TypeScriptCompile Include="Client\src\views\home\home.component.ts" />
     <TypeScriptCompile Include="Client\src\views\main\app.component.ts" />
     <TypeScriptCompile Include="Client\src\views\security\security.module.ts" />

@@ -1,28 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule  } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoute } from './app.router';
 import { AppComponent } from './views/main/app.component';
 import { HomeComponent } from './views/home/home.component';
 import { DataService } from './service/data.service';
+import { LoggerService, DbLoggerService, FileLoggerService } from './service/logger.service';
+
+//http get for have all logger
+var providers: any = [
+    { provide: LoggerService, useClass: DbLoggerService }, //Centralized DI, inject in constructor
+    { provide: "1", useClass: FileLoggerService }, //Conditional DI, Lookup injector.get()
+    DataService
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
-  imports: [
-    RouterModule.forRoot(AppRoute),
-    BrowserModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [
-    DataService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent
+    ],
+    imports: [
+        RouterModule.forRoot(AppRoute),
+        BrowserModule,
+        FormsModule,
+        HttpClientModule
+    ],
+    providers: providers,
+    bootstrap: [AppComponent]
 })
 
 export class AppModule { }

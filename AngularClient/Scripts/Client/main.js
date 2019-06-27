@@ -77,6 +77,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_main_app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/main/app.component */ "../src/views/main/app.component.ts");
 /* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/home/home.component */ "../src/views/home/home.component.ts");
 /* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./service/data.service */ "../src/service/data.service.ts");
+/* harmony import */ var _service_logger_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./service/logger.service */ "../src/service/logger.service.ts");
 
 
 
@@ -87,6 +88,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//http get for have all logger
+var providers = [
+    { provide: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["DbLoggerService"] },
+    { provide: "1", useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["FileLoggerService"] },
+    _service_data_service__WEBPACK_IMPORTED_MODULE_9__["DataService"]
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -102,9 +110,7 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"]
             ],
-            providers: [
-                _service_data_service__WEBPACK_IMPORTED_MODULE_9__["DataService"]
-            ],
+            providers: providers,
             bootstrap: [_views_main_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
@@ -241,6 +247,55 @@ var DataService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../src/service/logger.service.ts":
+/*!****************************************!*\
+  !*** ../src/service/logger.service.ts ***!
+  \****************************************/
+/*! exports provided: LoggerService, FileLoggerService, DbLoggerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoggerService", function() { return LoggerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileLoggerService", function() { return FileLoggerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DbLoggerService", function() { return DbLoggerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+
+var LoggerService = /** @class */ (function () {
+    function LoggerService() {
+    }
+    LoggerService.prototype.Log = function () {
+        console.log("Console logger is used");
+    };
+    return LoggerService;
+}());
+
+var FileLoggerService = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](FileLoggerService, _super);
+    function FileLoggerService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    FileLoggerService.prototype.Log = function () {
+        console.log("File logger is used");
+    };
+    return FileLoggerService;
+}(LoggerService));
+
+var DbLoggerService = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](DbLoggerService, _super);
+    function DbLoggerService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DbLoggerService.prototype.Log = function () {
+        console.log("Db logger is used");
+    };
+    return DbLoggerService;
+}(LoggerService));
+
+
+
+/***/ }),
+
 /***/ "../src/views/home/home.component.ts":
 /*!*******************************************!*\
   !*** ../src/views/home/home.component.ts ***!
@@ -253,15 +308,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_service_logger_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/service/logger.service */ "../src/service/logger.service.ts");
+
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(logger) {
+        this.logger = logger;
+        this.Logger = null;
+        this.Logger = logger;
+        this.Logger.Log();
     }
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             template: __webpack_require__(/*! raw-loader!./home.view.html */ "../node_modules/raw-loader/index.js!../src/views/home/home.view.html")
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_service_logger_service__WEBPACK_IMPORTED_MODULE_2__["LoggerService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
