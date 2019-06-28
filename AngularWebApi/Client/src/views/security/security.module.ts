@@ -1,20 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecurityRoute } from './security.router';
 import { UserSearchComponent } from './user/userSearch.component';
 import { UserInfoComponent } from './user/userInfo.component';
+import { GridComponent } from 'src/component/grid/grid.component';
 
 @NgModule({
     declarations:[
         UserSearchComponent,
-        UserInfoComponent
+        UserInfoComponent,
+        GridComponent
     ],
     imports:[
         RouterModule.forChild(SecurityRoute),
         CommonModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     providers:[],
     bootstrap:[UserSearchComponent]
@@ -36,3 +39,4 @@ export class SecurityModule { }
 
 //ReactiveFormsModule ngmodule: Exports the required infrastructure and directives for reactive forms, making them available for import by NgModules that import this module.
 //  such as: FormBuilder provider, FormControlName directive, FormGroup directive: Binds an existing FormGroup to a DOM element.
+

@@ -1,31 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule  } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoute } from './app.router';
 import { AppComponent } from './views/main/app.component';
 import { HomeComponent } from './views/home/home.component';
 import { DataService } from './service/data.service';
+import { LoggerService, DbLoggerService, FileLoggerService } from './service/logger.service';
+
+//http get for have all logger
+var providers: any = [
+    { provide: LoggerService, useClass: DbLoggerService }, //Centralized DI, inject in constructor
+    { provide: "1", useClass: FileLoggerService }, //Conditional DI, Lookup injector.get()
+    DataService
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
-  imports: [
-    RouterModule.forRoot(AppRoute),
-    BrowserModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [
-    DataService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent
+    ],
+    imports: [
+        RouterModule.forRoot(AppRoute),
+        BrowserModule,
+        FormsModule,
+        HttpClientModule
+    ],
+    providers: providers,
+    bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 
+//Decorators are proposed for a future version of JavaScript, but the Angular team really wanted to use them,
+//  and they have been included in TypeScript.
+//Decorators are functions that are invoked with a prefixed @symbol, 
+//  and immediately followed by a class, parameter, method or property.
+//  The decorator function is supplied information about the class, parameter or method,
+//  and the decorator function returns something in its place, or manipulates its target in some way.
+//  Typically the "something" a decorator returns is the same thing that was passed in, but it has been augmented in some way.
 
 
 //An NgModule is a class marked by the @NgModule decorator. @NgModule takes a metadata object that describes how to compile a component's template and
