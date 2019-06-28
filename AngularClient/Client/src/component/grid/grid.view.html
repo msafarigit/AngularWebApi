@@ -1,0 +1,19 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.Name}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of dataSource">
+            <td *ngFor="let col of columns">
+                {{row[col.Name]}}
+            </td>
+            <td>
+                <button type="button" (click)="select(row)">select</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

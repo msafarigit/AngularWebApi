@@ -18,7 +18,7 @@ module.exports = "welcome to home!\r\n<img width=\"300\" alt=\"Angular Logo\" sr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\r\n    <h1>\r\n        Welcome to {{ title }}!\r\n    </h1>\r\n</div>\r\n\r\n<ul>\r\n    <li>\r\n        <a [routerLink]=\"['Home']\">خانه</a>\r\n    </li>\r\n    <li>\r\n        <a [routerLink]=\"['UserSearch']\">مدیریت کاربران</a>\r\n    </li>\r\n</ul>\r\n<div>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<div style=\"text-align:center\">\r\n    <h1>\r\n        Welcome to {{ title }}!\r\n    </h1>\r\n</div>\r\n\r\n<ul>\r\n    <li>\r\n        <a [routerLink]=\"['Home']\">خانه</a>\r\n    </li>\r\n    <li>\r\n        <a [routerLink]=\"['UserSearch']\">مدیریت کاربران</a>\r\n    </li>\r\n</ul>\r\n\r\n<div>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -117,6 +117,13 @@ var AppModule = /** @class */ (function () {
     return AppModule;
 }());
 
+//Decorators are proposed for a future version of JavaScript, but the Angular team really wanted to use them,
+//  and they have been included in TypeScript.
+//Decorators are functions that are invoked with a prefixed @symbol, 
+//  and immediately followed by a class, parameter, method or property.
+//  The decorator function is supplied information about the class, parameter or method,
+//  and the decorator function returns something in its place, or manipulates its target in some way.
+//  Typically the "something" a decorator returns is the same thing that was passed in, but it has been augmented in some way.
 //An NgModule is a class marked by the @NgModule decorator. @NgModule takes a metadata object that describes how to compile a component's template and
 //how to create an injector at runtime.It identifies the module 's own components, directives, and pipes, making some of them public,
 //through the exports property, so that external components can use them. @NgModule can also add service providers to the application dependency injectors.

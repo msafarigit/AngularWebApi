@@ -5,11 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecurityRoute } from './security.router';
 import { UserSearchComponent } from './user/userSearch.component';
 import { UserInfoComponent } from './user/userInfo.component';
+import { GridComponent } from 'src/component/grid/grid.component';
 
 @NgModule({
     declarations:[
         UserSearchComponent,
-        UserInfoComponent
+        UserInfoComponent,
+        GridComponent
     ],
     imports:[
         RouterModule.forChild(SecurityRoute),
