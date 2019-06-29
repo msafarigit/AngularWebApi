@@ -1,27 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "../../node_modules/raw-loader/index.js!../src/views/home/home.view.html":
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/raw-loader!../src/views/home/home.view.html ***!
-  \*************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "welcome to home!"
-
-/***/ }),
-
-/***/ "../../node_modules/raw-loader/index.js!../src/views/main/app.view.html":
-/*!************************************************************************************************************************!*\
-  !*** C:/Users/Dot-PC/source/repos/AngularWebApi/AngularWebApi/node_modules/raw-loader!../src/views/main/app.view.html ***!
-  \************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<ul>\n  <li>\n    <a [routerLink]=\"['Home']\">خانه</a>\n  </li>\n  <li>\n    <a [routerLink]=\"['UserSearch']\">مدیریت کاربران</a>\n  </li>\n</ul>\n\n<div>\n  <router-outlet></router-outlet>\n</div>\n\n<div style=\"text-align:center\">\n    <h1>\n      Welcome to {{ title }}!\n    </h1>\n    <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>"
-
-/***/ }),
-
 /***/ "../src/$$_lazy_route_resource lazy recursive":
 /*!***********************************************************!*\
   !*** ../src/$$_lazy_route_resource lazy namespace object ***!
@@ -36,16 +14,16 @@ var map = {
 	]
 };
 function webpackAsyncContext(req) {
-	if(!__webpack_require__.o(map, req)) {
+	var ids = map[req];
+	if(!ids) {
 		return Promise.resolve().then(function() {
 			var e = new Error("Cannot find module '" + req + "'");
 			e.code = 'MODULE_NOT_FOUND';
 			throw e;
 		});
 	}
-
-	var ids = map[req], id = ids[0];
 	return __webpack_require__.e(ids[1]).then(function() {
+		var id = ids[0];
 		return __webpack_require__(id);
 	});
 }
@@ -77,6 +55,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_main_app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/main/app.component */ "../src/views/main/app.component.ts");
 /* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/home/home.component */ "../src/views/home/home.component.ts");
 /* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./service/data.service */ "../src/service/data.service.ts");
+/* harmony import */ var _service_logger_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./service/logger.service */ "../src/service/logger.service.ts");
 
 
 
@@ -87,6 +66,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//http get for have all logger
+var providers = [
+    { provide: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["DbLoggerService"] },
+    { provide: "1", useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["FileLoggerService"] },
+    _service_data_service__WEBPACK_IMPORTED_MODULE_9__["DataService"]
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -102,15 +88,20 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"]
             ],
-            providers: [
-                _service_data_service__WEBPACK_IMPORTED_MODULE_9__["DataService"]
-            ],
+            providers: providers,
             bootstrap: [_views_main_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
 }());
 
+//Decorators are proposed for a future version of JavaScript, but the Angular team really wanted to use them,
+//  and they have been included in TypeScript.
+//Decorators are functions that are invoked with a prefixed @symbol, 
+//  and immediately followed by a class, parameter, method or property.
+//  The decorator function is supplied information about the class, parameter or method,
+//  and the decorator function returns something in its place, or manipulates its target in some way.
+//  Typically the "something" a decorator returns is the same thing that was passed in, but it has been augmented in some way.
 //An NgModule is a class marked by the @NgModule decorator. @NgModule takes a metadata object that describes how to compile a component's template and
 //how to create an injector at runtime.It identifies the module 's own components, directives, and pipes, making some of them public,
 //through the exports property, so that external components can use them. @NgModule can also add service providers to the application dependency injectors.
@@ -241,6 +232,55 @@ var DataService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../src/service/logger.service.ts":
+/*!****************************************!*\
+  !*** ../src/service/logger.service.ts ***!
+  \****************************************/
+/*! exports provided: LoggerService, FileLoggerService, DbLoggerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoggerService", function() { return LoggerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileLoggerService", function() { return FileLoggerService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DbLoggerService", function() { return DbLoggerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
+
+var LoggerService = /** @class */ (function () {
+    function LoggerService() {
+    }
+    LoggerService.prototype.Log = function () {
+        console.log("Console logger is used");
+    };
+    return LoggerService;
+}());
+
+var FileLoggerService = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](FileLoggerService, _super);
+    function FileLoggerService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    FileLoggerService.prototype.Log = function () {
+        console.log("File logger is used");
+    };
+    return FileLoggerService;
+}(LoggerService));
+
+var DbLoggerService = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](DbLoggerService, _super);
+    function DbLoggerService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DbLoggerService.prototype.Log = function () {
+        console.log("Db logger is used");
+    };
+    return DbLoggerService;
+}(LoggerService));
+
+
+
+/***/ }),
+
 /***/ "../src/views/home/home.component.ts":
 /*!*******************************************!*\
   !*** ../src/views/home/home.component.ts ***!
@@ -253,20 +293,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_service_logger_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/service/logger.service */ "../src/service/logger.service.ts");
+
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(logger) {
+        this.logger = logger;
+        this.Logger = null;
+        this.Logger = logger;
+        this.Logger.Log();
     }
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            template: __webpack_require__(/*! raw-loader!./home.view.html */ "../../node_modules/raw-loader/index.js!../src/views/home/home.view.html")
-        })
+            template: __webpack_require__(/*! ./home.view.html */ "../src/views/home/home.view.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_service_logger_service__WEBPACK_IMPORTED_MODULE_2__["LoggerService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "../src/views/home/home.view.html":
+/*!****************************************!*\
+  !*** ../src/views/home/home.view.html ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "welcome to home!\r\n<img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">"
 
 /***/ }),
 
@@ -291,13 +349,24 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! raw-loader!./app.view.html */ "../../node_modules/raw-loader/index.js!../src/views/main/app.view.html")
+            template: __webpack_require__(/*! ./app.view.html */ "../src/views/main/app.view.html")
         })
     ], AppComponent);
     return AppComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "../src/views/main/app.view.html":
+/*!***************************************!*\
+  !*** ../src/views/main/app.view.html ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"text-align:center\">\r\n    <h1>\r\n        Welcome to {{ title }}!\r\n    </h1>\r\n</div>\r\n\r\n<ul>\r\n    <li>\r\n        <a [routerLink]=\"['Home']\">خانه</a>\r\n    </li>\r\n    <li>\r\n        <a [routerLink]=\"['UserSearch']\">مدیریت کاربران</a>\r\n    </li>\r\n</ul>\r\n\r\n<div>\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 

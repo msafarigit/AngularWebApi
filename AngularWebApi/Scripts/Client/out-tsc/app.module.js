@@ -8,6 +8,13 @@ import { AppRoute } from './app.router';
 import { AppComponent } from './views/main/app.component';
 import { HomeComponent } from './views/home/home.component';
 import { DataService } from './service/data.service';
+import { LoggerService, DbLoggerService, FileLoggerService } from './service/logger.service';
+//http get for have all logger
+var providers = [
+    { provide: LoggerService, useClass: DbLoggerService },
+    { provide: "1", useClass: FileLoggerService },
+    DataService
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -23,15 +30,20 @@ var AppModule = /** @class */ (function () {
                 FormsModule,
                 HttpClientModule
             ],
-            providers: [
-                DataService
-            ],
+            providers: providers,
             bootstrap: [AppComponent]
         })
     ], AppModule);
     return AppModule;
 }());
 export { AppModule };
+//Decorators are proposed for a future version of JavaScript, but the Angular team really wanted to use them,
+//  and they have been included in TypeScript.
+//Decorators are functions that are invoked with a prefixed @symbol, 
+//  and immediately followed by a class, parameter, method or property.
+//  The decorator function is supplied information about the class, parameter or method,
+//  and the decorator function returns something in its place, or manipulates its target in some way.
+//  Typically the "something" a decorator returns is the same thing that was passed in, but it has been augmented in some way.
 //An NgModule is a class marked by the @NgModule decorator. @NgModule takes a metadata object that describes how to compile a component's template and
 //how to create an injector at runtime.It identifies the module 's own components, directives, and pipes, making some of them public,
 //through the exports property, so that external components can use them. @NgModule can also add service providers to the application dependency injectors.

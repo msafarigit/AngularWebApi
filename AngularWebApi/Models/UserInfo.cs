@@ -5,11 +5,11 @@ using System.Web;
 
 namespace AngularWebApi.Models
 {
-    public class Klass
+    public class UserInfo
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public double Value { get; set; }
-        public bool IsActive { get; set; }
+        public string Password { get; set; }
+        public string Username { get; set; }
     }
 }

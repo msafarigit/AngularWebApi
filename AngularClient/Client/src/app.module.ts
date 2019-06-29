@@ -41,6 +41,9 @@ export class AppModule { }
 //  and the decorator function returns something in its place, or manipulates its target in some way.
 //  Typically the "something" a decorator returns is the same thing that was passed in, but it has been augmented in some way.
 
+//The @angular/platform-* packages enable Angular to be run in different contexts. 
+//  For examples, @angular/platform-server enables Angular to be run on the server,
+//  and @angular/platform-browser enables Angular to be run in a web browser.
 
 //An NgModule is a class marked by the @NgModule decorator. @NgModule takes a metadata object that describes how to compile a component's template and
 //how to create an injector at runtime.It identifies the module 's own components, directives, and pipes, making some of them public,

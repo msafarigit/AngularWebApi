@@ -5,36 +5,36 @@ using System.Web.Http;
 
 namespace AngularWebApi.Controllers
 {
-    public class ValuesController : ApiController
+    public class UserInfoController : ApiController
     {
-        // GET api/values
-        public IEnumerable<Klass> Get()
+        // GET api/UserInfo
+        public IEnumerable<UserInfo> Get()
         {
             HttpContext.Current.Session.Add("Client", Request);
 
-            return new Klass[] {
-                new Klass { ID = 1, Name = this.GetType().ToString(), IsActive = true, Value = 12.11  },
-                new Klass { ID = 2, Name = typeof(Klass).ToString(), IsActive = false, Value = 15  }
+            return new UserInfo[] {
+                new UserInfo { ID = 1, Name = "Hassan", Username = "HS", Password = "12345@" },
+                new UserInfo { ID = 2, Name = "Mohammad", Username = "MHD", Password = "98765@" }
             };
         }
 
-        // GET api/values/5
+        // GET api/UserInfo/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST api/UserInfo
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
+        // PUT api/UserInfo/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE api/UserInfo/5
         public void Delete(int id)
         {
         }

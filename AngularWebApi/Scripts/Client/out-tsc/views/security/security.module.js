@@ -2,10 +2,11 @@ import * as tslib_1 from "tslib";
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecurityRoute } from './security.router';
 import { UserSearchComponent } from './user/userSearch.component';
 import { UserInfoComponent } from './user/userInfo.component';
+import { GridComponent } from 'src/component/grid/grid.component';
 var SecurityModule = /** @class */ (function () {
     function SecurityModule() {
     }
@@ -13,12 +14,14 @@ var SecurityModule = /** @class */ (function () {
         NgModule({
             declarations: [
                 UserSearchComponent,
-                UserInfoComponent
+                UserInfoComponent,
+                GridComponent
             ],
             imports: [
                 RouterModule.forChild(SecurityRoute),
                 CommonModule,
-                FormsModule
+                FormsModule,
+                ReactiveFormsModule
             ],
             providers: [],
             bootstrap: [UserSearchComponent]
