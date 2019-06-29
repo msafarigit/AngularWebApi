@@ -23,7 +23,7 @@ export class DataService {
 //  or you can register providers with specific modules or components.
 //  You register providers in the metadata of the service(in the @Injectable() decorator), or in the @NgModule() or @Component() metadata
 
-//1- When you provide the service at the root level, Angular creates a single, shared instance of HeroService and injects it into any class that asks for it.
+//1- When you provide the service at the root level, Angular creates a single, shared instance of Service and injects it into any class that asks for it.
 //  Registering the provider in the @Injectable() metadata also allows Angular to optimize an app by removing the service from the compiled app if it isn't used.
 
 //2- When you register a provider with a specific NgModule, the same instance of a service is available to all components in that NgModule.

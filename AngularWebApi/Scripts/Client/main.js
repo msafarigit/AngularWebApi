@@ -54,9 +54,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.router */ "../src/app.router.ts");
 /* harmony import */ var _views_main_app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/main/app.component */ "../src/views/main/app.component.ts");
 /* harmony import */ var _views_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/home/home.component */ "../src/views/home/home.component.ts");
-/* harmony import */ var _service_data_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./service/data.service */ "../src/service/data.service.ts");
-/* harmony import */ var _service_logger_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./service/logger.service */ "../src/service/logger.service.ts");
-
+/* harmony import */ var _service_logger_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./service/logger.service */ "../src/service/logger.service.ts");
 
 
 
@@ -69,9 +67,8 @@ __webpack_require__.r(__webpack_exports__);
 
 //http get for have all logger
 var providers = [
-    { provide: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["LoggerService"], useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["DbLoggerService"] },
-    { provide: "1", useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_10__["FileLoggerService"] },
-    _service_data_service__WEBPACK_IMPORTED_MODULE_9__["DataService"]
+    { provide: _service_logger_service__WEBPACK_IMPORTED_MODULE_9__["LoggerService"], useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_9__["DbLoggerService"] },
+    { provide: "1", useClass: _service_logger_service__WEBPACK_IMPORTED_MODULE_9__["FileLoggerService"] } //Conditional DI, Lookup injector.get()
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -191,43 +188,6 @@ if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].produc
 }
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
     .catch(function (err) { return console.error(err); });
-
-
-/***/ }),
-
-/***/ "../src/service/data.service.ts":
-/*!**************************************!*\
-  !*** ../src/service/data.service.ts ***!
-  \**************************************/
-/*! exports provided: DataService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../../node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "../../node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "../../node_modules/@angular/common/fesm5/http.js");
-
-
-
-var DataService = /** @class */ (function () {
-    function DataService(http) {
-        this.http = http;
-        this.baseUrl = 'http://localhost:61757/api/';
-    }
-    DataService.prototype.get = function (controllerName) {
-        return this.http.get(this.baseUrl + controllerName);
-    };
-    DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], DataService);
-    return DataService;
-}());
-
 
 
 /***/ }),

@@ -12,8 +12,7 @@ import { LoggerService, DbLoggerService, FileLoggerService } from './service/log
 //http get for have all logger
 var providers: any = [
     { provide: LoggerService, useClass: DbLoggerService }, //Centralized DI, inject in constructor
-    { provide: "1", useClass: FileLoggerService }, //Conditional DI, Lookup injector.get()
-    DataService
+    { provide: "1", useClass: FileLoggerService } //Conditional DI, Lookup injector.get()
 ];
 
 @NgModule({
