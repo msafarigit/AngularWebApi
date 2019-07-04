@@ -104,6 +104,81 @@ Defining observers:
 
 An observer object can define any combination of these handlers. 
 If you don't supply a handler for a notification type, the observer ignores notifications of that type.
+
+Operators:
+ Operators are functions that build on the observables foundation to enable sophisticated manipulation of collections. 
+ For example, RxJS defines operators such as map(), filter(), concat(), and flatMap().
+ Operators take configuration options, and they return a function that takes a source observable.
+ When executing this returned function, the operator observes the source observable’s emitted values,
+ transforms them, and returns a new observable of those transformed values. Here is a simple example:
+
+Map operator sample:
+        import { map } from 'rxjs/operators';
+        
+        const nums = of(1, 2, 3);//observable
+        const squareValues = map((val: number) => val * val);
+        const squaredNums = squareValues(nums);
+        
+        squaredNums.subscribe(x => console.log(x));
+        
+        // Logs
+        // 1
+        // 4
+        // 9
+
+ You can use pipes to link operators together. 
+ Pipes let you combine multiple functions into a single function. 
+ The pipe() function takes as its arguments the functions you want to combine, and returns a new function that, 
+ when executed, runs the composed functions in sequence.
+
+ A set of operators applied to an observable is a recipe—that is, 
+ a set of instructions for producing the values you’re interested in. 
+ By itself, the recipe doesn’t do anything. You need to call subscribe() to produce a result through the recipe.
+
+Standalone pipe function sample:
+        import { filter, map } from 'rxjs/operators';
+        
+        const nums = of(1, 2, 3, 4, 5);
+        
+        // Create a function that accepts an Observable.
+        const squareOddVals = pipe(
+          filter((n: number) => n % 2 !== 0),
+          map(n => n * n)
+        );
+        
+        // Create an Observable that will run the filter and map functions
+        const squareOdd = squareOddVals(nums);
+        
+        // Subscribe to run the combined functions
+        squareOdd.subscribe(x => console.log(x));
+
+The pipe() function is also a method on the RxJS Observable, so you use this shorter form to define the same operation:
+
+Observable.pipe function sample:
+        import { filter, map } from 'rxjs/operators';
+        
+        const squareOdd = of(1, 2, 3, 4, 5)
+          .pipe(
+            filter(n => n % 2 !== 0),
+            map(n => n * n)
+          );
+        
+        // Subscribe to get values
+        squareOdd.subscribe(x => console.log(x));
+
+pipe(fn1: UnaryFunction<T, A>, fn2: UnaryFunction<A, B>, fn3: UnaryFunction<B, C>): UnaryFunction<T, C>
+
+    fn1
+        Type: UnaryFunction.
+
+    fn2
+        Type: UnaryFunction.
+
+    fn3
+        Type: UnaryFunction.
+
+    Returns
+        UnaryFunction<T, C>
 */
 
 /* Observables in Angular:
