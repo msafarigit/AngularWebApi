@@ -24,6 +24,7 @@ var providers: any = [
         RouterModule.forRoot(AppRoute),
         BrowserModule,
         FormsModule,
+        // import HttpClientModule after BrowserModule.
         HttpClientModule
     ],
     providers: providers,

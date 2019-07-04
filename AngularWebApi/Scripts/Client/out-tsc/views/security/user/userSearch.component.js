@@ -29,6 +29,7 @@ var UserSearchComponent = /** @class */ (function () {
         //this.User = new UserModel();
     };
     UserSearchComponent.prototype.Select = function (user) {
+        this.dataService.get("");
         console.log(user.Name);
     };
     UserSearchComponent = tslib_1.__decorate([
