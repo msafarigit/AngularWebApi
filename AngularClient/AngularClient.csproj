@@ -67,6 +67,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\src\component\grid\grid.view.html" />
     <Content Include="Client\src\content\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Client\src\content\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Client\src\content\bootstrap\css\bootstrap-reboot.css" />
@@ -82,6 +83,7 @@
     <Content Include="Client\src\content\jquery\jquery.min.js" />
     <Content Include="Client\src\content\jquery\jquery.slim.js" />
     <Content Include="Client\src\content\jquery\jquery.slim.min.js" />
+    <Content Include="Client\src\directive\grid\grid.view.html" />
     <Content Include="favicon.ico" />
     <Content Include="Client\src\content\general.css" />
     <Content Include="Client\src\index.html" />
@@ -132,6 +134,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="Client\src\app.module.ts" />
     <TypeScriptCompile Include="Client\src\app.router.ts" />
+    <TypeScriptCompile Include="Client\src\component\grid\grid.component.ts" />
+    <TypeScriptCompile Include="Client\src\directive\grid\grid.directive.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="Client\src\environments\environment.ts" />
     <TypeScriptCompile Include="Client\src\main.ts" />

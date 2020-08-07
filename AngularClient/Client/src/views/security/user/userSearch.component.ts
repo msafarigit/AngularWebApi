@@ -6,6 +6,7 @@ import { LoggerService } from 'src/service/logger.service';
 @Component({
     templateUrl: "./userSearch.view.html"
 })
+
 export class UserSearchComponent implements OnInit {
     Logger: LoggerService = null;
     UserList: Array<UserModel> = new Array<UserModel>();
@@ -13,6 +14,21 @@ export class UserSearchComponent implements OnInit {
     constructor(private dataService: DataService, private logger: LoggerService) {
         this.Logger = logger;
         this.Logger.Log();
+
+        var User = new UserModel();
+        User.Name = "Hasan";
+        User.Username = "HS";
+        User.Password = "12345";
+        this.UserList.push(User);
+
+        User = new UserModel();
+        User.Name = "Mohammad";
+        User.Username = "MM";
+        User.Password = "87647";
+        this.UserList.push(User);
+    }
+
+    ngOnInit() {
     }
 
     Add() {
@@ -20,7 +36,7 @@ export class UserSearchComponent implements OnInit {
         //this.User = new UserModel();
     }
 
-    ngOnInit() {        
-
+    Select(user: UserModel) {
+        console.log(user.Name);
     }
 }

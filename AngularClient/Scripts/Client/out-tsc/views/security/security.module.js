@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SecurityRoute } from './security.router';
 import { UserSearchComponent } from './user/userSearch.component';
 import { UserInfoComponent } from './user/userInfo.component';
+import { GridComponent } from 'src/component/grid/grid.component';
 var SecurityModule = /** @class */ (function () {
     function SecurityModule() {
     }
@@ -13,7 +14,8 @@ var SecurityModule = /** @class */ (function () {
         NgModule({
             declarations: [
                 UserSearchComponent,
-                UserInfoComponent
+                UserInfoComponent,
+                GridComponent
             ],
             imports: [
                 RouterModule.forChild(SecurityRoute),
